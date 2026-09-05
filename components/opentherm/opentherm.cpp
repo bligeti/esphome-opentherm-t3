@@ -267,31 +267,31 @@ void OpenTherm::debug_data(OpenthermData &data) {
            format_bin_to(hb_buf, data.valueHB), format_bin_to(lb_buf, data.valueLB));
   ESP_LOGD(TAG, "type: %s; id: %u; HB: %u; LB: %u; uint_16: %u; float: %f",
            this->message_type_to_str((MessageType) data.type), data.id, data.valueHB, data.valueLB, data.u16(),
-           data.f88());
+           data.get_f88());
 }
 
-float OpenthermData::f88() { return ((float) this->s16()) / 256.0f; }
+float OpenthermData::get_f88() { return ((float) this->get_s16()) / 256.0f; }
 
-void OpenthermData::f88(float value) { this->s16((int16_t) (value * 256)); }
+void OpenthermData::set_f88(float value) { this->set_s16((int16_t) (value * 256)); }
 
 // clang-format o
 
-uint16_t OpenthermData::u16() {
+uint16_t OpenthermData::get_u16() {
   uint16_t const value = this->valueHB;
   return (value << 8) | this->valueLB;
 }
 
-void OpenthermData::u16(uint16_t value) {
+void OpenthermData::set_u16(uint16_t value) {
   this->valueLB = value & 0xFF;
   this->valueHB = (value >> 8) & 0xFF;
 }
 
-int16_t OpenthermData::s16() {
+int16_t OpenthermData::get_s16() {
   int16_t const value = this->valueHB;
   return (value << 8) | this->valueLB;
 }
 
-void OpenthermData::s16(int16_t value) {
+void OpenthermData::set_s16(int16_t value) {
   this->valueLB = value & 0xFF;
   this->valueHB = (value >> 8) & 0xFF;
 }
