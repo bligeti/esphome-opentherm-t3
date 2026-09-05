@@ -16,8 +16,7 @@
 #include "HardwareSerial.h"
 #include "Stm32AppProtocol.h"
 
-namespace esphome {
-namespace opentherm {
+namespace esphome::opentherm {
 
 template<class T> constexpr T read_bit(T value, uint8_t bit) { return (value >> bit) & 0x01; }
 
@@ -339,5 +338,4 @@ private:
   void write_bit_(uint8_t high, uint8_t clock);
 };
 
-}  // namespace opentherm
-}  // namespace esphome
+}  // namespace esphome::opentherm

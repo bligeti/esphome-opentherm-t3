@@ -175,5 +175,4 @@ class OpenthermHub : public Component {
   void dump_config() override;
 };
 
-}  // namespace opentherm
-}  // namespace esphome
+}  // namespace esphome::opentherm

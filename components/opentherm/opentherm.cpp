@@ -12,8 +12,7 @@
 
 #include "opentherm.h"
 
-namespace esphome {
-namespace opentherm {
+namespace esphome::opentherm {
 
 using std::string;
 using std::to_string;
@@ -297,5 +296,4 @@ void OpenthermData::s16(int16_t value) {
   this->valueHB = (value >> 8) & 0xFF;
 }
 
-}  // namespace opentherm
-}  // namespace esphome
+}  // namespace esphome::opentherm
