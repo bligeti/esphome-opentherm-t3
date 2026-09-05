@@ -107,6 +107,7 @@ bool OpenTherm::get_message(OpenthermData &data) {
 
 void OpenTherm::stop() {
   this->mode_ = OperationMode::IDLE;
+  this->out_pin_->digital_write(true);
 }
 
 // https://stackoverflow.com/questions/21617970/how-to-check-if-value-has-even-parity-of-bits-or-odd
