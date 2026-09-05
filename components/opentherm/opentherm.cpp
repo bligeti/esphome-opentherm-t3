@@ -270,7 +270,7 @@ void OpenTherm::debug_data(OpenthermData &data) {
            data.f88());
 }
 
-float OpenthermData::f88() { return ((float) this->s16()) / 256.0; }
+float OpenthermData::f88() { return ((float) this->s16()) / 256.0f; }
 
 void OpenthermData::f88(float value) { this->s16((int16_t) (value * 256)); }
 
