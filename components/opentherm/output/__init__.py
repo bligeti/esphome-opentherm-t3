@@ -4,7 +4,8 @@ import esphome.codegen as cg
 import esphome.config_validation as cv
 from esphome.components import output
 from esphome.const import CONF_ID
-from .. import const, schema, validate, input, generate
+
+from .. import const, generate, input, schema, validate
 
 DEPENDENCIES = [const.OPENTHERM]
 COMPONENT_TYPE = const.OUTPUT
