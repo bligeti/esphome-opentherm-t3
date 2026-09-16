@@ -267,7 +267,7 @@ void OpenTherm::debug_data(OpenthermData &data) {
   ESP_LOGD(TAG, "%s %s %s %s", format_bin_to(type_buf, data.type), format_bin_to(id_buf, data.id),
            format_bin_to(hb_buf, data.valueHB), format_bin_to(lb_buf, data.valueLB));
   ESP_LOGD(TAG, "type: %s; id: %u; HB: %u; LB: %u; uint_16: %u; float: %f",
-           this->message_type_to_str((MessageType) data.type), data.id, data.valueHB, data.valueLB, data.u16(),
+           this->message_type_to_str((MessageType) data.type), data.id, data.valueHB, data.valueLB, data.get_u16(),
            data.get_f88());
 }
 
