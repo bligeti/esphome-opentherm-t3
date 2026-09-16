@@ -1,7 +1,6 @@
 #pragma once
 
-namespace esphome {
-namespace opentherm {
+namespace esphome::opentherm {
 
 class OpenthermInput {
  public:
