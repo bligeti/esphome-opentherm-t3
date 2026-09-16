@@ -35,8 +35,7 @@
 
 #include "opentherm_macros.h"
 
-namespace esphome {
-namespace opentherm {
+namespace esphome::opentherm {
 
 static const uint8_t REPEATING_MESSAGE_ORDER = 255;
 static const uint8_t INITIAL_UNORDERED_MESSAGE_ORDER = 254;
