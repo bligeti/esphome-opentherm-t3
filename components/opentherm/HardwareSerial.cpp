@@ -7,8 +7,7 @@
 
 #define ECHO_UART_PORT_NUM (UART_NUM_1)
 
-namespace esphome {
-namespace opentherm {
+namespace esphome::opentherm {
 
 void HardwareSerial::begin(uint32_t baudRate, uint32_t tx, uint32_t rx) {
   uart_config_t uart_config = {
@@ -49,5 +48,4 @@ bool HardwareSerial::available() {
   return size > 0;
 }
 
-}  // namespace opentherm
-}  // namespace esphome
+}  // namespace esphome::opentherm
